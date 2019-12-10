@@ -43,7 +43,7 @@ export default class Container extends Component {
       .get("/api/treasure/user")
       .then(treasure => {
         this.setState({
-          treasures: { ...this.state.treasures, user: treasure.data }
+          treasures: { ...this.state.treasures, user: treasure.data },
         });
       })
       .catch(error => alert(error.response.request.response));
